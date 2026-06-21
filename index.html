@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scape Sintag</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:#0a0020;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+    font-family:'Courier New',monospace;
+    color:#eee;
+  }
+
+  .logo-wrap{
+    margin-bottom:32px;
+    text-align:center;
+  }
+  .logo-wrap img{
+    max-width:340px;
+    width:80vw;
+    image-rendering:pixelated;
+  }
+  .logo-title{
+    font-size:2rem;
+    font-weight:bold;
+    color:#e94560;
+    letter-spacing:4px;
+    text-shadow:0 0 20px #e9456088;
+  }
+  .logo-sub{
+    font-size:0.85rem;
+    color:#7fdbff;
+    margin-top:6px;
+    letter-spacing:2px;
+  }
+
+  .menu{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    align-items:center;
+    width:100%;
+    max-width:320px;
+  }
+
+  .btn{
+    width:100%;
+    padding:14px 0;
+    border-radius:10px;
+    border:2px solid transparent;
+    font-family:'Courier New',monospace;
+    font-size:1rem;
+    font-weight:bold;
+    cursor:pointer;
+    letter-spacing:1px;
+    transition:all .18s;
+    text-decoration:none;
+    text-align:center;
+    display:block;
+  }
+  .btn-primary{
+    background:#e94560;
+    color:#fff;
+    border-color:#e94560;
+  }
+  .btn-primary:hover{
+    background:#c73050;
+    box-shadow:0 0 18px #e9456066;
+    transform:translateY(-2px);
+  }
+  .btn-secondary{
+    background:transparent;
+    color:#7fdbff;
+    border-color:#7fdbff44;
+  }
+  .btn-secondary:hover{
+    border-color:#7fdbff;
+    background:#7fdbff11;
+    transform:translateY(-2px);
+  }
+
+  .controls{
+    margin-top:28px;
+    font-size:0.75rem;
+    color:#555;
+    text-align:center;
+    line-height:2;
+  }
+  .controls span{
+    color:#3a86ff;
+  }
+
+  .footer{
+    position:fixed;
+    bottom:12px;
+    font-size:0.7rem;
+    color:#333;
+    letter-spacing:1px;
+  }
+</style>
+</head>
+<body>
+
+<div class="logo-wrap">
+  <!-- Si tienes logo.png, se muestra; si no, muestra el texto -->
+  <img src="logo.png" alt="Scape Sintag"
+    onerror="this.style.display='none'; document.getElementById('logo-txt').style.display='block'">
+  <div id="logo-txt" style="display:none">
+    <div class="logo-title">SCAPE SINTAG</div>
+    <div class="logo-sub">Resuelve el puzzle • Aprende sintaxis</div>
+  </div>
+</div>
+
+<div class="menu">
+  <a class="btn btn-primary" href="motor-v8.html">▶ JUGAR</a>
+  <a class="btn btn-secondary" href="#controles" onclick="toggleControls()">🎮 Controles</a>
+</div>
+
+<div class="controls" id="controles" style="display:none">
+  <span>← → ↑ ↓</span> Mover al personaje<br>
+  <span>H</span> Ver pista (tras un error)<br>
+  <span>R</span> Reiniciar el nivel actual<br>
+  <br>
+  Empuja las cajas hacia la placa correcta<br>
+  para abrir la puerta y avanzar al siguiente nivel.
+</div>
+
+<div class="footer">SCAPE SINTAG · Proyecto educativo</div>
+
+<script>
+function toggleControls(){
+  const el=document.getElementById('controles');
+  el.style.display=el.style.display==='none'?'block':'none';
+}
+</script>
+</body>
+</html>
