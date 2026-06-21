@@ -1,0 +1,1 @@
+Este trabajo es para una tarea de Sintaxis, es mi primera vez creando un juego, asi que solo tengan un poco de paciencia, la verdad creo que si puedo seguir mejorandolo. Aunque sea para terminar la idea completa.
